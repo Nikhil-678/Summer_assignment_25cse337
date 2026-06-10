@@ -1,15 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int i,table,n;
-    printf("which multiplication table you want");
+    int digit,n,rev=0;
+    printf("enter a number");
     scanf("%d",&n);
-    for(i=1;i<=10;i++)
+    while(n>0)
     {
-        table=n*i;
-        printf("%d x %d = %d\n",n,i,table);
-
+        digit=n%10;
+        rev=rev*10+digit;
+        n=n/10;
     }
-    return 0;
-
+    printf("reverse of the input number is = %d",rev);
 }

@@ -1,13 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int count=0,n;
+    int n,num=0,digit,original;
     printf("enter a number");
     scanf("%d",&n);
+    original=n;
     while(n>0)
     {
-        n=n/10;
-        count++;
+        digit=n%10;
+        num=num*10+digit;
+        n/=10;
     }
-    printf("no. of digit in that no. is %d",count);
+    if(original==num)
+    {
+        printf("the input number is palindrome");
+    }
+    else
+    {
+        printf("the input number is not pelindrome");
+    }
 }
